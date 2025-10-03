@@ -26,14 +26,7 @@ services:
       - duckdns-data:/config
     networks:
       - proxy
-  mediaflow_proxy:
-    image: qwertyuiop8899/mediaflow-proxy:latest
-    container_name: mediaflow_proxy
-    env_file:
-      - ./mfp/.env
-    restart: unless-stopped
-    networks:
-      - proxy
+
   mammamia:
     build: ./mammamia
     container_name: mammamia
